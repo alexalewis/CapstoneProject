@@ -1,0 +1,25 @@
+/* Provide sufficient contrast against white background */
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+:root {
+  font-size: 16px;
+  font-family: 'Quicksand';
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}

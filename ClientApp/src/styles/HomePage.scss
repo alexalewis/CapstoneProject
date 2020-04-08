@@ -1,0 +1,120 @@
+@import './_variables.scss';
+
+* {
+  font-family: $primary-font;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu li {
+  list-style: none;
+  color: $grey-color;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 10% 10% 10%;
+  grid-template-columns: 100vw;
+}
+
+.link,
+.noAccount {
+  text-decoration: none;
+  color: $grey-color;
+}
+
+.link:hover {
+  color: $purple-color;
+  text-decoration: none;
+}
+
+.noAccount:hover {
+  color: $orange-color;
+}
+
+header {
+  background-image: url('../images/header.jpg');
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.appHeading,
+.tagline {
+  text-align: center;
+  color: $purple-color;
+}
+
+.appHeading {
+  text-shadow: 2px 2px 4px #c38d9eeb;
+}
+
+.aboutUsHeading {
+  text-align: center;
+  font-size: 2rem;
+  color: $grey-color;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.aboutUs p {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-bottom: 4rem;
+  line-height: 1.7rem;
+  text-align: center;
+}
+
+.boom {
+  color: $purple-color;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.howItWorks {
+  color: white;
+  text-align: center;
+  background-color: $orange-color;
+  padding-bottom: 3rem;
+}
+
+.howItWorks h3 {
+  padding-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #e27d60;
+}
+
+.list h4 {
+  font-size: 1.2rem;
+  text-decoration: underline;
+  margin-top: 1rem;
+}
+
+.list {
+  border: 0.1rem solid white;
+  border-radius: 5rem;
+  box-shadow: inset 2px 2px 8px 2px rgba(215, 214, 214, 0.4);
+  margin: 1.5rem;
+  padding: 1rem;
+}
+
+.list p {
+  margin: 1.3rem;
+}
+
+footer {
+  text-align: center;
+  color: $grey-color;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
