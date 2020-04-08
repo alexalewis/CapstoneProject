@@ -1,56 +1,46 @@
-# SDG Console template
+# Capstone
 
-This is the template app SDG uses to start off learning C# and .NET
+This app is supposed to be like "Tinder" but for finding rescue animals
 
-## What is does
+You will create a profile
+Add a photo
+Answer questions
+-search radius
+-what kind of animal
+-what type of housing you have
+-yard space
+-any other animals you have
+-age you prefer
+-if you have kids - how old they are
+-breed
+-etc...
 
-This provides a basic console application with the following features:
+Once you have answered questions- this becomes your "search" and you are
+matched with corresponding animals that match those requirements
 
-- A gitignore
-- A README
-- Tasks that allows users to push to GitHub Automatically.
-- EF Core integration
-- a basic [React SPA + Web API](https://docs.microsoft.com/en-us/aspnet/core/client-side/spa/react?view=aspnetcore-3.1&tabs=visual-studio)
-- docker set up
-- Swagger documentations
-- CORS
-- Dependency Injection of DbContext
-- Scaffolding
-- React integration
+You should be able to swipe on them
+-left means pass
+-right means favorite and save
 
-## How to work with Custom Templates
+Once you find an animal you want
+-fill out an application
+-send that application to that rescue
 
-First, [read the docs](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates).
+If you click "find a match" -
+it directs you to a sign up page which will ask for
+-name
+-email
+-password
+then this will direct to questions that make up profile
 
-Now with that in mind, The project has 3 main parts:
+if you click "sign in" -
+it directs you to page for input
+-email
+-password
+then this will direct you to profile
 
-1. `sdg-react-template.nuspec`. This file contains the meta data for the package that is built, The only items that need touched are the `<files>` and the `<version>`
+once in profile -
+-there will be a button to start "swiping"
+-a button for favorites
 
-2. `SampleApp`. This is sample project. Any changes to the template happen here.
-
-3. `SampleApp\template.config`. This contains the behavior of the package. This generally isn't touch unless you are changing the project type.
-
-## How to update something
-
-To update, I would recommend opening just the `SampleApp` Folder and working in that project like it was just a normal C# app. Get things working and then test it out.
-
-## How to deploy
-
-Install [nuget](https://docs.microsoft.com/en-us/nuget/reference/nuget-exe-cli-reference) and [set your API key for nuget.org](https://docs.microsoft.com/en-us/nuget/reference/cli-reference/cli-ref-setapikey)
-
-1. Delete the `bin` and the `obj` folder
-2. Bump the version number in the `sdg-react-template.nuspec`.
-3. run `nuget pack .`
-4. run `nuget push SDG.templates.Web.React.X.X.X.nupkg -Source https://www.nuget.org` with the correct version number
-
-This will push it to Nuget. Nuget will index the package, and when it's done indexing (~ 1-30 minutes), it will available for install. To install on a students laptop
-
-```sh
-dotnet new --install SDG.templates.Web.React::X.X.X
-```
-
-To update after download, its the same command
-
-```sh
-dotnet new --install SDG.templates.Web.React::X.X.X
-```
+- and a button for any responses from applications
