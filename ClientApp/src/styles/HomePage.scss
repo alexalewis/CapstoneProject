@@ -16,7 +16,7 @@
   margin-top: 1rem;
 }
 
-.header {
+.homePageHeader {
   display: grid;
   grid-template-rows: 10% 10% 10%;
   grid-template-columns: 100vw;
@@ -112,9 +112,24 @@ header {
   margin: 1.3rem;
 }
 
+.twitter,
+.facebook {
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  color: $purple-color;
+  margin: 1rem;
+  &:hover {
+    color: $orange-color;
+  }
+  &:focus {
+    outline-color: white;
+  }
+}
+
 footer {
   text-align: center;
   color: $grey-color;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }

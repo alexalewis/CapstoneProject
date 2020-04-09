@@ -1,0 +1,102 @@
+@import './_variables.scss';
+
+.profilePageHeader {
+  background-color: $orange-color;
+}
+
+.navUl li {
+  list-style: none;
+  padding-top: 1rem;
+}
+
+.linkToHome {
+  color: white;
+  &:hover {
+    text-decoration: none;
+    color: $grey-color;
+  }
+}
+
+.profileHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+.name {
+  color: white;
+}
+
+.city {
+  color: $grey-color;
+}
+
+.locationIcon {
+  margin-right: 0.5rem;
+}
+
+.profilePicture {
+  border: 0.05rem solid $blue-color;
+  border-radius: 50%;
+  width: 50%;
+  height: auto;
+  padding: 7rem;
+  margin-top: -2rem;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.favorites,
+.applications {
+  background-color: transparent;
+  border: none;
+  font-size: 2.5rem;
+  color: $purple-color;
+  &:hover {
+    outline-color: white;
+    color: $orange-color;
+  }
+}
+
+.iconLayout {
+  display: flex;
+  flex-direction: column;
+}
+
+.iconLayout p {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  color: $grey-color;
+}
+
+.aboutYou {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $blue-color;
+  padding-top: 3rem;
+}
+
+.aboutYou h2 {
+  color: $grey-color;
+}
+
+.aboutYouThings {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.aboutYouThings li {
+  margin: 2rem;
+  color: white;
+}

@@ -1,11 +1,14 @@
 import '../styles/HomePage.scss'
 import React from 'react'
 import NavBar from '../components/NavBar'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 
 const HomePage = () => {
   return (
     <>
-      <header className="header">
+      <header className="homePageHeader">
         <NavBar />
         <h1 className="appHeading">Name of the App</h1>
         <h2 className="tagline">Your furry friend is waiting</h2>
@@ -46,7 +49,14 @@ const HomePage = () => {
       </section>
       <footer>
         <section className="footerName">Name</section>
-        <section className="socialMedia">Twitter Logo, FB logo</section>
+        <section className="socialMedia">
+          <button className="twitter">
+            <FontAwesomeIcon icon={faTwitterSquare} />
+          </button>
+          <button className="facebook">
+            <FontAwesomeIcon icon={faFacebookSquare} />
+          </button>
+        </section>
       </footer>
     </>
   )
