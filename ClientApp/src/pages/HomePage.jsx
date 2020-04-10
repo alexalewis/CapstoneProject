@@ -1,9 +1,7 @@
 import '../styles/HomePage.scss'
 import React from 'react'
 import NavBar from '../components/NavBar'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitterSquare } from '@fortawesome/free-brands-svg-icons'
-import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
+import Footer from '../components/Footer'
 
 const HomePage = () => {
   return (
@@ -47,17 +45,7 @@ const HomePage = () => {
           </p>
         </section>
       </section>
-      <footer>
-        <section className="footerName">Name</section>
-        <section className="socialMedia">
-          <button className="twitter">
-            <FontAwesomeIcon icon={faTwitterSquare} />
-          </button>
-          <button className="facebook">
-            <FontAwesomeIcon icon={faFacebookSquare} />
-          </button>
-        </section>
-      </footer>
+      <Footer />
     </>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/ProfilePage.scss'
+import Footer from '../components/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaw } from '@fortawesome/free-solid-svg-icons'
 import { faFileAlt } from '@fortawesome/free-solid-svg-icons'
@@ -61,6 +62,7 @@ const ProfilePage = () => {
           </ul>
         </section>
       </section>
+      <Footer />
     </>
   )
 }

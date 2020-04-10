@@ -8,6 +8,9 @@ namespace CapstoneProject.Models
   public partial class DatabaseContext : DbContext
   {
 
+    public DbSet<User> Users { get; set; }
+    public DbSet<Animal> Animals { get; set; }
+    public DbSet<Match> Matches { get; set; }
 
 
 
