@@ -49,7 +49,7 @@ namespace CapstoneProject
           ValidateLifetime = true,
           ValidateIssuerSigningKey = true,
 
-          IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("Some really long secret string"))
+          IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("THE SAME REALLY LONG STRING"))
         };
       });
 
@@ -84,8 +84,8 @@ namespace CapstoneProject
       });
 
       app.UseAuthentication();
-      app.UseAuthorization();
       app.UseRouting();
+      app.UseAuthorization();
 
       app.UseEndpoints(endpoints =>
       {

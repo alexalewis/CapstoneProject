@@ -7,7 +7,7 @@
   margin-bottom: 2rem;
 }
 
-input {
+.signUpInput {
   padding: 1rem 8rem;
   display: flex;
   margin-left: 2rem;
@@ -15,7 +15,7 @@ input {
   margin-bottom: 1rem;
 }
 
-input:focus {
+.signUpInput:focus {
   outline-color: $blue-color;
 }
 
@@ -31,7 +31,7 @@ label {
   margin-top: 3rem;
 }
 
-.enterButton button {
+.submitButton button {
   padding: 1rem 5rem;
   font-size: 1rem;
   font-family: 'Quicksand';

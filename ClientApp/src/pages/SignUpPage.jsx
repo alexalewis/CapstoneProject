@@ -28,6 +28,7 @@ const SignUpPage = () => {
       <section className="signUp">
         <label htmlFor="firstName">First Name</label>
         <input
+          className="signUpInput"
           type="text"
           name="firstName"
           value={firstName}
@@ -35,6 +36,7 @@ const SignUpPage = () => {
         ></input>
         <label htmlFor="lastName">Last Name</label>
         <input
+          className="signUpInput"
           type="text"
           name="lastName"
           value={lastName}
@@ -42,6 +44,7 @@ const SignUpPage = () => {
         ></input>
         <label htmlFor="emailAddress">Email Address</label>
         <input
+          className="signUpInput"
           type="email"
           name="emailAddress"
           value={email}
@@ -49,13 +52,14 @@ const SignUpPage = () => {
         ></input>
         <label htmlFor="password">Password</label>
         <input
+          className="signUpInput"
           type="password"
           name="password"
           value={password}
           onChange={e => setPassword(e.target.value)}
         ></input>
       </section>
-      <section className="enterButton">
+      <section className="submitButton">
         <button onClick={sendNewUserToApi}>
           <Link className="signUpButton" to="/questionnaire">
             Sign Up
