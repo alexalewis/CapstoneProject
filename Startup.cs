@@ -7,6 +7,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using CapstoneProject.Models;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace CapstoneProject
 {
@@ -36,6 +39,21 @@ namespace CapstoneProject
   c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
 });
       services.AddDbContext<DatabaseContext>();
+
+      services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+      {
+        options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+        {
+          ValidateIssuer = false,
+          ValidateAudience = false,
+          ValidateLifetime = true,
+          ValidateIssuerSigningKey = true,
+
+          IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("Some really long secret string"))
+        };
+      });
+
+
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,6 +82,9 @@ namespace CapstoneProject
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
 
       });
+
+      app.UseAuthentication();
+      app.UseAuthorization();
       app.UseRouting();
 
       app.UseEndpoints(endpoints =>
