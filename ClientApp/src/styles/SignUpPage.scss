@@ -2,7 +2,7 @@
 
 .signUpHeader {
   text-align: center;
-  color: $purple-color;
+  color: $blue-color;
   margin-top: 4rem;
   margin-bottom: 2rem;
 }
@@ -16,7 +16,7 @@ input {
 }
 
 input:focus {
-  outline-color: $purple-color;
+  outline-color: $blue-color;
 }
 
 label {
@@ -35,10 +35,12 @@ label {
   padding: 1rem 5rem;
   font-size: 1rem;
   font-family: 'Quicksand';
-  background-color: $purple-color;
+  background-color: $blue-color;
   text-decoration: none;
+  border: none;
+  margin-bottom: 4rem;
   &:hover {
-    background-color: $orange-color;
+    background-color: $purple-color;
     color: white;
   }
 }

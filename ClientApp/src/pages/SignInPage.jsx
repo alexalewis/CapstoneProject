@@ -11,9 +11,9 @@ const SignInPage = () => {
       {/* logo, nav bar */}
       <h1 className="signInHeader">Welcome Back!</h1>
       <section className="signIn">
-        <label for="email">Email</label>
+        <label htmlFor="email">Email</label>
         <input type="email" placeholder="Email Address"></input>
-        <label for="text">Password</label>
+        <label htmlFor="text">Password</label>
         <input type="text" placeholder="Password"></input>
       </section>
       <section className="enterButton">
