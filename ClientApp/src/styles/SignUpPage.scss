@@ -1,0 +1,53 @@
+@import './_variables.scss';
+
+.signUpHeader {
+  text-align: center;
+  color: $purple-color;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+input {
+  padding: 1rem 8rem;
+  display: flex;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+input:focus {
+  outline-color: $purple-color;
+}
+
+label {
+  margin-left: 2rem;
+  font-size: 1.3rem;
+  color: $grey-color;
+}
+
+.enterButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.enterButton button {
+  padding: 1rem 5rem;
+  font-size: 1rem;
+  font-family: 'Quicksand';
+  background-color: $purple-color;
+  text-decoration: none;
+  &:hover {
+    background-color: $orange-color;
+    color: white;
+  }
+}
+
+.signUpButton {
+  text-decoration: none;
+  color: white;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}

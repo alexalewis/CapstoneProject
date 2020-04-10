@@ -2,6 +2,7 @@ import '../styles/SignInPage.scss'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import NavBar from '../components/NavBar'
+import Footer from '../components/Footer.jsx'
 
 const SignInPage = () => {
   return (
@@ -24,11 +25,12 @@ const SignInPage = () => {
       </section>
       <section className="account">
         <p>
-          <Link className="noAccount" to="/match">
+          <Link className="noAccount" to="/sign-up">
             Don't have an account?
           </Link>
         </p>
       </section>
+      <Footer />
     </>
   )
 }
