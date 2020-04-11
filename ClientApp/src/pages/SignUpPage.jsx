@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import Footer from '../components/Footer.jsx'
 import '../styles/SignUpPage.scss'
 
@@ -9,6 +10,7 @@ const SignUpPage = () => {
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [shouldRedirect, setShouldRedirect] = useState(false)
 
   const sendNewUserToApi = async () => {
     const resp = await axios.post('/auth/signup', {
@@ -18,6 +20,14 @@ const SignUpPage = () => {
       password: password,
     })
     console.log(resp.data)
+    if (resp.status === 200) {
+      localStorage.setItem('token', resp.data.token)
+      setShouldRedirect(true)
+    }
+  }
+
+  if (shouldRedirect) {
+    return <Redirect to="/questionnaire" />
   }
 
   return (
@@ -60,11 +70,7 @@ const SignUpPage = () => {
         ></input>
       </section>
       <section className="submitButton">
-        <button onClick={sendNewUserToApi}>
-          <Link className="signUpButton" to="/questionnaire">
-            Sign Up
-          </Link>
-        </button>
+        <button onClick={sendNewUserToApi}>Sign Up</button>
       </section>
 
       <Footer />

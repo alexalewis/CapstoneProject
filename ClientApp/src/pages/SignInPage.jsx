@@ -15,6 +15,7 @@ const SignInPage = () => {
       password: logInPassword,
     })
     console.log(resp.data)
+    // setToken(resp.data.token)
   }
 
   return (

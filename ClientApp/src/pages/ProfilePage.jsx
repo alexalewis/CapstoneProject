@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 import '../styles/ProfilePage.scss'
 import Footer from '../components/Footer'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,6 +9,22 @@ import { faFileAlt } from '@fortawesome/free-solid-svg-icons'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
 const ProfilePage = () => {
+  const [profile, setProfile] = useState({})
+
+  const loadProfile = async () => {
+    const resp = await axios.get('/api/profile', {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('token')}`,
+      },
+    })
+    console.log(resp.data)
+    setProfile(resp.data)
+  }
+
+  useEffect(() => {
+    loadProfile()
+  }, [])
+
   return (
     <>
       <section className="profilePageHeader">
@@ -22,10 +39,12 @@ const ProfilePage = () => {
         </nav>
 
         <section className="profileHeader">
-          <h2 className="name">Your Name</h2>
+          <h2 className="name">
+            {profile.FirstName} {profile.LastName}
+          </h2>
           <p className="city">
             <FontAwesomeIcon icon={faMapMarkerAlt} className="locationIcon" />
-            Your city
+            {profile.Zipcode}
           </p>
         </section>
       </section>

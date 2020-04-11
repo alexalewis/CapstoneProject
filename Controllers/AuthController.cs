@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
 namespace CapstoneProject.Controllers
@@ -21,10 +22,12 @@ namespace CapstoneProject.Controllers
   {
 
 
-    private DatabaseContext _context;
+    readonly private DatabaseContext _context;
+    readonly private string JWT_KEY;
 
-    public AuthController(DatabaseContext context)
+    public AuthController(DatabaseContext context, IConfiguration config)
     {
+      JWT_KEY = config["JWT_KEY"];
       _context = context;
     }
 
@@ -43,7 +46,7 @@ namespace CapstoneProject.Controllers
         }),
         Expires = expirationTime,
         SigningCredentials = new SigningCredentials(
-              new SymmetricSecurityKey(Encoding.ASCII.GetBytes("THE SAME REALLY LONG STRING")),
+              new SymmetricSecurityKey(Encoding.ASCII.GetBytes(JWT_KEY)),
               SecurityAlgorithms.HmacSha256Signature
             )
       };
@@ -79,7 +82,7 @@ namespace CapstoneProject.Controllers
       _context.Users.Add(user);
       await _context.SaveChangesAsync();
 
-      user.HashedPassword = null;
+
       return Ok(new { Token = CreateJwt(user), user = user });
     }
 
@@ -98,7 +101,7 @@ namespace CapstoneProject.Controllers
 
       if (results == PasswordVerificationResult.Success)
       {
-        user.HashedPassword = null;
+
         return Ok(new { Token = CreateJwt(user), user = user });
       }
       else

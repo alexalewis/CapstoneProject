@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace CapstoneProject.Models
 {
@@ -8,7 +9,6 @@ namespace CapstoneProject.Models
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Email { get; set; }
-    public string HashedPassword { get; set; }
     public int Age { get; set; }
     public int Zipcode { get; set; }
     public string HousingType { get; set; }
@@ -17,6 +17,9 @@ namespace CapstoneProject.Models
     public bool OtherAnimals { get; set; }
     public string TypeOfOtherAnimal { get; set; }
     public bool SmallChildren { get; set; }
+
+    [JsonIgnore]
+    public string HashedPassword { get; set; }
 
     public List<Match> Match { get; set; } = new List<Match>();
 
