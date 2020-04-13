@@ -16,6 +16,7 @@ namespace CapstoneProject.Models
     public bool NeedYard { get; set; }
     public bool GoodWithOtherAnimals { get; set; }
     public bool GoodWithSmallChildren { get; set; }
+    public bool IsActive { get; set; }
     public bool IsNeutered { get; set; }
     public bool IsVaccinated { get; set; }
     public DateTime DateAdded { get; set; } = DateTime.Now;

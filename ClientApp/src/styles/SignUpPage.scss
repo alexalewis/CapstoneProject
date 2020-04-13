@@ -43,6 +43,9 @@ label {
     background-color: $purple-color;
     color: white;
   }
+  &:focus {
+    outline-color: $purple-color;
+  }
 }
 
 .signUpButton {

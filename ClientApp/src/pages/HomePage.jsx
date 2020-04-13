@@ -15,7 +15,7 @@ const HomePage = () => {
         <h3 className="aboutUsHeading">About Us</h3>
         <p>
           We know how it is. You search what kind of animal you want to rescue
-          and then <span class="boom">BOOM</span>, 100 pages of animals to
+          and then <span className="boom">BOOM</span>, 100 pages of animals to
           choose from. We also know how difficult it can be to see all of their
           faces and make a choice. We want to make it easier and less
           overwhelming for you.

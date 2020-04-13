@@ -24,6 +24,7 @@ namespace CapstoneProject.Controllers
       _context = context;
     }
 
+    [HttpGet]
     public async Task<ActionResult> GetUserProfile()
     {
       var userId = int.Parse(User.Claims.FirstOrDefault(claim => claim.Type == "id").Value);

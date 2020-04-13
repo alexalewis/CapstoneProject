@@ -1,0 +1,44 @@
+@import './_variables.scss';
+
+.question {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: $orange-color;
+}
+
+#topOfPage {
+  margin-top: 4rem;
+}
+
+.inputRadio {
+  display: flex;
+  flex-direction: row;
+}
+
+.inputRadio label {
+  font-size: 1rem;
+  margin-top: 0.75rem;
+}
+
+.submitQuestionButton {
+  margin-bottom: 5rem;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.submitQuestionButton button {
+  padding: 1rem 5rem;
+  font-size: 1rem;
+  font-family: 'Quicksand';
+  background-color: $orange-color;
+  text-decoration: none;
+  border: none;
+  color: white;
+  &:hover {
+    background-color: $purple-color;
+    color: white;
+  }
+}

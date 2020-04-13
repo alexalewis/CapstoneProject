@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import NavBar from '../components/NavBar'
 import { Redirect } from 'react-router-dom'
 import Footer from '../components/Footer.jsx'
 import '../styles/SignUpPage.scss'
@@ -32,6 +32,7 @@ const SignUpPage = () => {
 
   return (
     <>
+      <NavBar />
       <section>
         <h1 className="signUpHeader">Create an Account</h1>
       </section>

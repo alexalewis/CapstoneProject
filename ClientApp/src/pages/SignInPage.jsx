@@ -4,18 +4,24 @@ import { Link } from 'react-router-dom'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer.jsx'
 import axios from 'axios'
+import { useUserProfile } from '../components/UserProfileContext'
 
 const SignInPage = () => {
   const [logInEmail, setLogInEmail] = useState('')
   const [logInPassword, setLogInPassword] = useState('')
+
+  const { reloadUser } = useUserProfile()
 
   const logUserIntoApi = async () => {
     const resp = await axios.post('/auth/login', {
       email: logInEmail,
       password: logInPassword,
     })
-    console.log(resp.data)
-    // setToken(resp.data.token)
+    if (resp.status === 200) {
+      console.log(resp.data)
+      localStorage.setItem('token', resp.data.token)
+      reloadUser()
+    }
   }
 
   return (
@@ -39,11 +45,9 @@ const SignInPage = () => {
         ></input>
       </section>
       <section className="enterButton">
-        <button onClick={logUserIntoApi}>
-          <Link className="signInButton" to="/profile">
-            Sign In
-          </Link>
-        </button>
+        <Link className="signInButton" to="/profile">
+          <button onClick={logUserIntoApi}>Sign In</button>
+        </Link>
       </section>
       <section className="account">
         <p>

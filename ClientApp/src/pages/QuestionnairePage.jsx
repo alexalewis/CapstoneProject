@@ -1,13 +1,16 @@
 import React, { useEffect } from 'react'
 import axios from 'axios'
+import Questions from '../components/Questions'
+import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
+import '../styles/QuestionnairePage.scss'
 
 const QuestionnairePage = () => {
   return (
     <>
-      <p>
-        I need to have a questions component here and useEffect to have it load
-        questions on page load
-      </p>
+      <NavBar />
+      <Questions />
+      <Footer />
     </>
   )
 }

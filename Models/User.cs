@@ -14,6 +14,7 @@ namespace CapstoneProject.Models
     public string HousingType { get; set; }
     public bool HaveYard { get; set; }
     public bool IsFenced { get; set; }
+    public bool IsActive { get; set; }
     public bool OtherAnimals { get; set; }
     public string TypeOfOtherAnimal { get; set; }
     public bool SmallChildren { get; set; }
