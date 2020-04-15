@@ -19,6 +19,11 @@ input {
   margin-bottom: 1rem;
 }
 
+input,
+input[placeholder] {
+  text-align: center;
+}
+
 input:focus {
   outline-color: $purple-color;
 }

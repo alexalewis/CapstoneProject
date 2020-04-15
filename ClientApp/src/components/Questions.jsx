@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Questions = () => {
+  const [bool, setBool] = useState([])
+
   return (
     <>
       <form className="questionForm">
@@ -47,51 +49,56 @@ const Questions = () => {
         </section>
         <p className="question">Do you have a yard?</p>
         <section className="inputRadio">
-          <input type="radio" id="true" name="HaveYard" value="true"></input>
-          <label htmlFor="true">Yes</label>
+          <input type="radio" id="yesYard" name="HaveYard" value="yes"></input>
+          <label htmlFor="yesYard">Yes</label>
         </section>
         <section className="inputRadio">
-          <input type="radio" id="false" name="HaveYard" value="false"></input>
-          <label htmlFor="false">No</label>
+          <input type="radio" id="noYard" name="HaveYard" value="no"></input>
+          <label htmlFor="noYard">No</label>
         </section>
         <p className="question">
           Is your yard fenced? Select "No" if you do not have a yard.
         </p>
         <section className="inputRadio">
-          <input type="radio" id="true" name="IsFenced" value="true"></input>
-          <label htmlFor="true">Yes</label>
+          <input type="radio" id="yesFence" name="IsFenced" value="yes"></input>
+          <label htmlFor="yesFence">Yes</label>
         </section>
         <section className="inputRadio">
-          <input type="radio" id="false" name="IsFenced" value="false"></input>
-          <label htmlFor="false">No</label>
+          <input type="radio" id="noFence" name="IsFenced" value="no"></input>
+          <label htmlFor="noFence">No</label>
         </section>
         <p className="question">Do you consider yourself to be active?</p>
         <section className="inputRadio">
-          <input type="radio" id="true" name="IsActive" value="true"></input>
-          <label htmlFor="true">Yes</label>
+          <input
+            type="radio"
+            id="yesActive"
+            name="IsActive"
+            value="yes"
+          ></input>
+          <label htmlFor="yesActive">Yes</label>
         </section>
         <section className="inputRadio">
-          <input type="radio" id="false" name="IsActive" value="false"></input>
-          <label htmlFor="false">No</label>
+          <input type="radio" id="noActive" name="IsActive" value="no"></input>
+          <label htmlFor="noActive">No</label>
         </section>
         <p className="question">Do you have other animals?</p>
         <section className="inputRadio">
           <input
             type="radio"
-            id="true"
+            id="yesAnimals"
             name="OtherAnimals"
-            value="true"
+            value="yes"
           ></input>
-          <label htmlFor="true">Yes</label>
+          <label htmlFor="yesAnimals">Yes</label>
         </section>
         <section className="inputRadio">
           <input
             type="radio"
-            id="false"
+            id="noAnimals"
             name="OtherAnimals"
-            value="false"
+            value="no"
           ></input>
-          <label htmlFor="false">No</label>
+          <label htmlFor="noAnimals">No</label>
         </section>
         <p className="question">What type of other animal do you have?</p>
         <section className="inputRadio">
@@ -127,20 +134,20 @@ const Questions = () => {
         <section className="inputRadio">
           <input
             type="radio"
-            id="true"
+            id="yesChildren"
             name="SmallChildren"
-            value="true"
+            value="yes"
           ></input>
-          <label htmlFor="true">Yes</label>
+          <label htmlFor="yesChildren">Yes</label>
         </section>
         <section className="inputRadio">
           <input
             type="radio"
-            id="false"
+            id="noChildren"
             name="SmallChildren"
-            value="false"
+            value="no"
           ></input>
-          <label htmlFor="false">No</label>
+          <label htmlFor="noChildren">No</label>
         </section>
       </form>
       <section className="submitQuestionButton">
