@@ -1,15 +1,15 @@
-import React, { useState, Children } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 
 const Questions = () => {
   const [age, setAge] = useState('')
   const [zipcode, setZipcode] = useState('')
-  const [housingType, setHousingType] = useState()
+  const [housingType, setHousingType] = useState('')
   const [haveYard, setHaveYard] = useState(false)
   const [isFenced, setIsFenced] = useState(false)
   const [isActive, setIsActive] = useState(false)
   const [otherAnimals, setOtherAnimals] = useState(false)
-  const [typeOfOtherAnimal, setTypeOfOtherAnimal] = useState()
+  const [typeOfOtherAnimal, setTypeOfOtherAnimal] = useState('')
   const [smallChildren, setSmallChildren] = useState(false)
 
   const changeHousingType = value => {
@@ -283,7 +283,7 @@ const Questions = () => {
         </section>
       </form>
       <section className="submitQuestionButton">
-        <button>Submit</button>
+        <button onClick={sendAnswersToApi}>Submit</button>
       </section>
     </>
   )

@@ -9,8 +9,8 @@ namespace CapstoneProject.Models
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Email { get; set; }
-    public int Age { get; set; }
-    public int Zipcode { get; set; }
+    public string Age { get; set; }
+    public string Zipcode { get; set; }
     public string HousingType { get; set; }
     public bool HaveYard { get; set; }
     public bool IsFenced { get; set; }
