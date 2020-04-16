@@ -1,13 +1,8 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
 using CapstoneProject.Models;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CapstoneProject.Controllers
 {
@@ -24,29 +19,30 @@ namespace CapstoneProject.Controllers
       _context = context;
     }
 
-    [HttpPost("questions")]
+    [HttpPost]
 
     public async Task<ActionResult<User>> AnswersToQuestions(User user)
     {
+      var userId = int.Parse(User.Claims.FirstOrDefault(claim => claim.Type == "id").Value);
+      var currentUser = await _context.Users.FirstOrDefaultAsync(f => f.Id == userId);
 
-      var updatedUser = new User
-      {
-        Age = user.Age,
-        Zipcode = user.Zipcode,
-        HousingType = user.HousingType,
-        HaveYard = user.HaveYard,
-        IsFenced = user.IsFenced,
-        IsActive = user.IsActive,
-        OtherAnimals = user.OtherAnimals,
-        TypeOfOtherAnimal = user.TypeOfOtherAnimal,
-        SmallChildren = user.SmallChildren,
-      };
-      _context.Users.Add(updatedUser);
+      currentUser.Age = user.Age;
+      currentUser.Zipcode = user.Zipcode;
+      currentUser.HousingType = user.HousingType;
+      currentUser.HaveYard = user.HaveYard;
+      currentUser.IsFenced = user.IsFenced;
+      currentUser.IsActive = user.IsActive;
+      currentUser.OtherAnimals = user.OtherAnimals;
+      currentUser.TypeOfOtherAnimal = user.TypeOfOtherAnimal;
+      currentUser.SmallChildren = user.SmallChildren;
+
+
+      _context.Users.Add(currentUser);
       await _context.SaveChangesAsync();
-
-      return Ok(updatedUser = user);
-
+      return Ok(currentUser);
     }
+
+
 
   }
 }

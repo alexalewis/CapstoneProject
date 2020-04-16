@@ -72,7 +72,7 @@ const Questions = () => {
 
   const sendAnswersToApi = async () => {
     const resp = await axios.post(
-      '/api/questions',
+      '/api/questionnaire',
       {
         Age: age,
         Zipcode: zipcode,
@@ -247,6 +247,16 @@ const Questions = () => {
             onChange={e => changeTypeOfOtherAnimal(e.target.value)}
           ></input>
           <label htmlFor="dog">Dog</label>
+        </section>
+        <section className="inputRadio">
+          <input
+            type="radio"
+            id="both"
+            name="TypeOfOtherAnimal"
+            value="cat and dog"
+            onChange={e => changeTypeOfOtherAnimal(e.target.value)}
+          ></input>
+          <label htmlFor="both">Cat and Dog</label>
         </section>
         <section className="inputRadio">
           <input
