@@ -1,6 +1,8 @@
 using System.Linq;
 using System.Threading.Tasks;
 using CapstoneProject.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,6 +10,7 @@ namespace CapstoneProject.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
+  [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 
   public class QuestionnaireController : ControllerBase
   {
@@ -36,13 +39,10 @@ namespace CapstoneProject.Controllers
       currentUser.TypeOfOtherAnimal = user.TypeOfOtherAnimal;
       currentUser.SmallChildren = user.SmallChildren;
 
-
-      _context.Users.Add(currentUser);
+      _context.Entry(currentUser).State = EntityState.Modified;
       await _context.SaveChangesAsync();
       return Ok(currentUser);
     }
-
-
 
   }
 }
