@@ -3,15 +3,17 @@ using System;
 using CapstoneProject.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace CapstoneProject.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20200418192156_SeededFirstAnimal")]
+    partial class SeededFirstAnimal
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -85,7 +87,7 @@ namespace CapstoneProject.Migrations
                             Age = "4 years old",
                             Breed = "Greyhound",
                             CatOrDog = "Dog",
-                            DateAdded = new DateTime(2020, 4, 18, 15, 32, 39, 222, DateTimeKind.Local).AddTicks(3350),
+                            DateAdded = new DateTime(2020, 4, 18, 15, 21, 56, 224, DateTimeKind.Local).AddTicks(4450),
                             Description = "Jack is a retired race dog who wants to spend the rest of his days with a family who will love and care for him. He would do best in a home that has a fenced yard.",
                             GoodWithOtherAnimals = true,
                             GoodWithSmallChildren = true,
@@ -97,26 +99,6 @@ namespace CapstoneProject.Migrations
                             Name = "Jack",
                             NeedYard = true,
                             RescueCenter = "Greyhounds of Florida",
-                            Zipcode = "33713"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Age = "6 years old",
-                            Breed = "Tabby",
-                            CatOrDog = "Cat",
-                            DateAdded = new DateTime(2020, 4, 18, 15, 32, 39, 223, DateTimeKind.Local).AddTicks(4580),
-                            Description = "Honey is a sweet girl who is looking for someone with a comfy lap and has time to pet her for days.",
-                            GoodWithOtherAnimals = true,
-                            GoodWithSmallChildren = true,
-                            HousingType = "house",
-                            ImageUrl = "../images/tabby.jpg",
-                            IsActive = false,
-                            IsNeutered = true,
-                            IsVaccinated = true,
-                            Name = "Honey",
-                            NeedYard = false,
-                            RescueCenter = "PetPal Animal Shelter",
                             Zipcode = "33713"
                         });
                 });

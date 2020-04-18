@@ -6,13 +6,12 @@ import SignInPage from './pages/SignInPage'
 import ProfilePage from './pages/ProfilePage'
 import SignUpPage from './pages/SignUpPage'
 import QuestionnairePage from './pages/QuestionnairePage'
+import MatchesPage from './pages/MatchesPage'
 import NotFound from './pages/NotFound'
 import './custom.scss'
 import axios from 'axios'
 import { UserProfileContext } from './components/UserProfileContext'
 
-// export default class App extends Component {
-//   static displayName = App.name
 const App = () => {
   const [user, setUser] = useState({})
   const token = localStorage.getItem('token')
@@ -41,6 +40,7 @@ const App = () => {
         <Route exact path="/sign-in" component={SignInPage}></Route>
         <Route exact path="/profile" component={ProfilePage}></Route>
         <Route exact path="/sign-up" component={SignUpPage}></Route>
+        <Route exact path="/matches" component={MatchesPage}></Route>
         <Route
           exact
           path="/questionnaire"

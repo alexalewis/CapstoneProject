@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const Questions = () => {
   const [age, setAge] = useState('')
@@ -95,6 +96,10 @@ const Questions = () => {
 
   return (
     <>
+      <p className="directions">
+        Just fill out these questions and then sign in to get started finding a
+        match!
+      </p>
       <form className="questionForm">
         <p className="question" id="topOfPage">
           How old are you?
@@ -293,7 +298,9 @@ const Questions = () => {
         </section>
       </form>
       <section className="submitQuestionButton">
-        <button onClick={sendAnswersToApi}>Submit</button>
+        <Link to="/sign-in">
+          <button onClick={sendAnswersToApi}>Submit</button>
+        </Link>
       </section>
     </>
   )

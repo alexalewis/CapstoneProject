@@ -36,7 +36,7 @@ const ProfilePage = () => {
         </section>
       </section>
       <section className="profilePicture">
-        <img className="profileImage"></img>
+        <img className="profileImage" src="../images/profile-pic.jpg" />
       </section>
 
       <section className="icons">
@@ -57,7 +57,6 @@ const ProfilePage = () => {
         <h2>About You</h2>
         <section>
           <ul className="aboutYouThings">
-            <li>Thing</li>
             <li>Thing</li>
             <li>Thing</li>
             <li>Thing</li>

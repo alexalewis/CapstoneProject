@@ -7,11 +7,11 @@ namespace CapstoneProject.Models
   {
     public int Id { get; set; }
     public string Name { get; set; }
-    public int Age { get; set; }
+    public string Age { get; set; }
     public string CatOrDog { get; set; }
     public string Breed { get; set; }
     public string RescueCenter { get; set; }
-    public int Zipcode { get; set; }
+    public string Zipcode { get; set; }
     public string HousingType { get; set; }
     public bool NeedYard { get; set; }
     public bool GoodWithOtherAnimals { get; set; }
@@ -19,6 +19,8 @@ namespace CapstoneProject.Models
     public bool IsActive { get; set; }
     public bool IsNeutered { get; set; }
     public bool IsVaccinated { get; set; }
+    public string Description { get; set; }
+    public string ImageUrl { get; set; }
     public DateTime DateAdded { get; set; } = DateTime.Now;
 
     public List<Match> Match { get; set; } = new List<Match>();
