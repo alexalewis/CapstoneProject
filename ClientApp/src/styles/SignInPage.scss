@@ -79,15 +79,9 @@ label {
 
 @media only screen and (min-width: 650px) {
   .signIn {
-    display: flex;
-    flex-direction: column;
-  }
-
-  input {
-    justify-content: center;
-    align-items: center;
-    margin-right: 2rem;
-    margin-left: 2rem;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -95,14 +89,9 @@ label {
   .signIn {
     display: flex;
     flex-direction: column;
-  }
-
-  input {
-    margin-left: 10rem;
-    margin-right: 10rem;
-  }
-
-  label {
-    padding-left: 8rem;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
   }
 }
