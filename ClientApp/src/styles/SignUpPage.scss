@@ -56,3 +56,35 @@ label {
     color: white;
   }
 }
+
+//Media Queries
+
+@media only screen and (min-width: 650px) {
+  .signUp {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .signUp {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .signUpInput {
+    margin-left: 12rem;
+    margin-right: 12rem;
+  }
+
+  label {
+    padding-left: 10rem;
+  }
+}

@@ -53,3 +53,19 @@
     outline-color: $purple-color;
   }
 }
+
+//Media Queries
+
+@media only screen and (min-width: 1024px) {
+  .questionForm {
+    margin-left: 25rem;
+  }
+
+  .directions {
+    text-align: center;
+  }
+
+  .inputRadio label {
+    margin-left: -8rem;
+  }
+}

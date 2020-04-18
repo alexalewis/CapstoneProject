@@ -38,19 +38,22 @@
 }
 
 .profilePicture {
-  border: 0.05rem solid $blue-color;
+  background-image: url('../images/profile-pic.jpg');
+  background-size: contain;
+  border: 0.1rem solid $blue-color;
   border-radius: 50%;
-  width: 50%;
+  width: 17rem;
   height: auto;
-  padding: 7rem;
+  padding: 10rem;
   margin-top: -2rem;
+  margin-left: 5rem;
 }
 
 .icons {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin-top: 5rem;
+  margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
@@ -99,4 +102,29 @@
 .aboutYouThings li {
   margin: 2rem;
   color: white;
+}
+
+//Media Queries
+
+@media only screen and (min-width: 650px) {
+  .profilePicture {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12rem;
+  }
+
+  .favorites,
+  .applications {
+    font-size: 3rem;
+  }
+
+  .iconLayout p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .profilePicture {
+    padding: 15rem;
+  }
 }

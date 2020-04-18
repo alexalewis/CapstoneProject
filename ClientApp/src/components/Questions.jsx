@@ -138,6 +138,7 @@ const Questions = () => {
         </section>
         <section className="inputRadio">
           <input
+            className="longerStringOne"
             type="radio"
             id="house"
             name="HousingType"
@@ -255,6 +256,7 @@ const Questions = () => {
         </section>
         <section className="inputRadio">
           <input
+            className="longerStringTwo"
             type="radio"
             id="both"
             name="TypeOfOtherAnimal"

@@ -35,9 +35,7 @@ const ProfilePage = () => {
           </p>
         </section>
       </section>
-      <section className="profilePicture">
-        <img className="profileImage" src="../images/profile-pic.jpg" />
-      </section>
+      <section className="profilePicture"></section>
 
       <section className="icons">
         <section className="iconLayout">

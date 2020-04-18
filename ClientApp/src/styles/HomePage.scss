@@ -113,3 +113,19 @@ header {
 }
 
 //Media Queries
+
+@media only screen and (min-width: 768px) {
+  .howItWorks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .list {
+    width: 50%;
+  }
+
+  .howItWorks h3 {
+    font-size: 3rem;
+  }
+}
