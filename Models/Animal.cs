@@ -14,7 +14,7 @@ namespace CapstoneProject.Models
     public string Zipcode { get; set; }
     public string HousingType { get; set; }
     public bool NeedYard { get; set; }
-    public bool GoodWithOtherAnimals { get; set; }
+    public string GoodWith { get; set; }
     public bool GoodWithSmallChildren { get; set; }
     public bool IsActive { get; set; }
     public bool IsNeutered { get; set; }

@@ -33,5 +33,18 @@ namespace CapstoneProject.Controllers
 
       return Ok(user);
     }
+
+    [HttpGet("matches")]
+
+    public async Task<ActionResult> GetMatches()
+    {
+      var userId = int.Parse(User.Claims.FirstOrDefault(claim => claim.Type == "id").Value);
+
+      var user = await _context.Users.FirstOrDefaultAsync(f => f.Id == userId);
+
+      var matches = await _context.Animals.Where(animal => animal.HousingType == user.HousingType && animal.NeedYard == user.HaveYard && animal.GoodWithSmallChildren == user.SmallChildren && animal.GoodWith == user.TypeOfOtherAnimal).ToListAsync();
+
+      return Ok(matches);
+    }
   }
 }

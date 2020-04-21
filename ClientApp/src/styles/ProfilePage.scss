@@ -67,6 +67,23 @@
     outline-color: white;
     color: $orange-color;
   }
+  &:focus {
+    outline-color: white;
+  }
+}
+
+.matching {
+  background-color: transparent;
+  border: none;
+  font-size: 3.5rem;
+  color: $blue-color;
+  &:hover {
+    outline-color: white;
+    color: $orange-color;
+  }
+  &:focus {
+    outline-color: white;
+  }
 }
 
 .iconLayout {
