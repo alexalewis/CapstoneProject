@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import PetCard from '../components/PetCard'
 
 const Matches = () => {
+  const [pets, setPets] = useState([])
+
   const getMatches = async () => {
     const resp = await axios.get('/api/profile/matches', {
       headers: {
@@ -10,6 +13,7 @@ const Matches = () => {
       },
     })
     console.log(resp.data)
+    setPets(resp.data)
   }
 
   useEffect(() => {
@@ -23,8 +27,10 @@ const Matches = () => {
           <button>Back to my profile</button>
         </Link>
       </section>
-      <section className="matchCard">
-        <p>this is where animal match will go</p>
+      <section className="petCard">
+        {pets.map(pet => {
+          return <PetCard key={pet.id} animal={pet} />
+        })}
       </section>
     </>
   )

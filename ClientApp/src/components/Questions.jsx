@@ -298,7 +298,7 @@ const Questions = () => {
         </section>
       </form>
       <section className="submitQuestionButton">
-        <Link to="/sign-in">
+        <Link to="/profile">
           <button onClick={sendAnswersToApi}>Submit</button>
         </Link>
       </section>

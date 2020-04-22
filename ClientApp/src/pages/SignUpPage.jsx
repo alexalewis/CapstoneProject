@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import NavBar from '../components/NavBar'
 import { Redirect } from 'react-router-dom'
@@ -11,6 +11,10 @@ const SignUpPage = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [shouldRedirect, setShouldRedirect] = useState(false)
+
+  // useEffect(() => {
+  //   localStorage.removeItem('token')
+  // })
 
   const sendNewUserToApi = async () => {
     const resp = await axios.post('/auth/signup', {

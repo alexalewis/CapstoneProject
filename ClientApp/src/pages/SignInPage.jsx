@@ -1,5 +1,5 @@
 import '../styles/SignInPage.scss'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer.jsx'
@@ -11,6 +11,10 @@ const SignInPage = () => {
   const [logInPassword, setLogInPassword] = useState('')
 
   const { reloadUser } = useUserProfile()
+
+  // useEffect(() => {
+  //   localStorage.removeItem('token')
+  // })
 
   const logUserIntoApi = async () => {
     const resp = await axios.post('/auth/login', {
