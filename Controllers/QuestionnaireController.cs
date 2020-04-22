@@ -33,7 +33,7 @@ namespace CapstoneProject.Controllers
       currentUser.Zipcode = user.Zipcode;
       currentUser.HousingType = user.HousingType;
       currentUser.HaveYard = user.HaveYard;
-      currentUser.IsFenced = user.IsFenced;
+      currentUser.LookingFor = user.LookingFor;
       currentUser.IsActive = user.IsActive;
       currentUser.OtherAnimals = user.OtherAnimals;
       currentUser.TypeOfOtherAnimal = user.TypeOfOtherAnimal;

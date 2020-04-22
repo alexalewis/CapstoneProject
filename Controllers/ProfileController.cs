@@ -42,7 +42,7 @@ namespace CapstoneProject.Controllers
 
       var user = await _context.Users.FirstOrDefaultAsync(f => f.Id == userId);
 
-      var matches = await _context.Animals.Where(animal => animal.HousingType == user.HousingType && animal.NeedYard == user.HaveYard && animal.GoodWithSmallChildren == user.SmallChildren && animal.GoodWith == user.TypeOfOtherAnimal).ToListAsync();
+      var matches = await _context.Animals.Where(animal => animal.CatOrDog == user.LookingFor && animal.HousingType == user.HousingType && animal.NeedYard == user.HaveYard && animal.GoodWithSmallChildren == user.SmallChildren && animal.GoodWith == user.TypeOfOtherAnimal).ToListAsync();
 
       return Ok(matches);
     }

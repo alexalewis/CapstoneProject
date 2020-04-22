@@ -7,7 +7,7 @@ const Questions = () => {
   const [zipcode, setZipcode] = useState('')
   const [housingType, setHousingType] = useState('')
   const [haveYard, setHaveYard] = useState(false)
-  const [isFenced, setIsFenced] = useState(false)
+  const [lookingFor, setLookingFor] = useState('')
   const [isActive, setIsActive] = useState(false)
   const [otherAnimals, setOtherAnimals] = useState(false)
   const [typeOfOtherAnimal, setTypeOfOtherAnimal] = useState('')
@@ -29,11 +29,11 @@ const Questions = () => {
     }
   }
 
-  const changeToIsFenced = value => {
-    if (value === 'yes') {
-      setIsFenced(true)
+  const changeToLookingFor = value => {
+    if (value === 'cat') {
+      setLookingFor(value)
     } else {
-      setIsFenced(false)
+      setLookingFor(value)
     }
   }
 
@@ -79,7 +79,7 @@ const Questions = () => {
         Zipcode: zipcode,
         HousingType: housingType,
         HaveYard: haveYard,
-        IsFenced: isFenced,
+        LookingFor: lookingFor,
         IsActive: isActive,
         OtherAnimals: otherAnimals,
         TypeOfOtherAnimal: typeOfOtherAnimal,
@@ -168,28 +168,26 @@ const Questions = () => {
           ></input>
           <label htmlFor="noYard">No</label>
         </section>
-        <p className="question">
-          Is your yard fenced? Select "No" if you do not have a yard.
-        </p>
+        <p className="question">Are you searching for a cat or dog?</p>
         <section className="inputRadio">
           <input
             type="radio"
-            id="yesFence"
-            name="IsFenced"
-            value="yes"
-            onChange={e => changeToIsFenced(e.target.value)}
+            id="yesCat"
+            name="LookingFor"
+            value="cat"
+            onChange={e => changeToLookingFor(e.target.value)}
           ></input>
-          <label htmlFor="yesFence">Yes</label>
+          <label htmlFor="yesCat">Cat</label>
         </section>
         <section className="inputRadio">
           <input
             type="radio"
-            id="noFence"
-            name="IsFenced"
-            value="no"
-            onChange={e => changeToIsFenced(e.target.value)}
+            id="yesDog"
+            name="LookingFor"
+            value="dog"
+            onChange={e => changeToLookingFor(e.target.value)}
           ></input>
-          <label htmlFor="noFence">No</label>
+          <label htmlFor="yesDog">Dog</label>
         </section>
         <p className="question">Do you consider yourself to be active?</p>
         <section className="inputRadio">
