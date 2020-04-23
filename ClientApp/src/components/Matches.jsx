@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import PetCard from '../components/PetCard'
+import '../styles/Matches.scss'
 
 const Matches = () => {
   const [pets, setPets] = useState([])
@@ -22,9 +23,9 @@ const Matches = () => {
 
   return (
     <>
-      <section>
+      <section className="profileButton">
         <Link to="/profile">
-          <button>Back to my profile</button>
+          <button className="backToProfile">Back to my profile</button>
         </Link>
       </section>
       <section className="petCard">

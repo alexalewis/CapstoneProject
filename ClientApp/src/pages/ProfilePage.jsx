@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
 import { Redirect } from 'react-router-dom'
 import { useUserProfile } from '../components/UserProfileContext'
 import '../styles/ProfilePage.scss'
