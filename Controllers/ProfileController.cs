@@ -81,9 +81,9 @@ namespace CapstoneProject.Controllers
     {
 
       var userId = int.Parse(User.Claims.FirstOrDefault(claim => claim.Type == "id").Value);
-      var favorite = _context.Favorites.Where(r => r.UserId == userId && r.AnimalId == animalId);
+      var favorite = await _context.Favorites.Where(r => r.UserId == userId && r.AnimalId == animalId).FirstAsync();
 
-      _context.Favorites.Remove((Favorite)favorite);
+      _context.Favorites.Remove(favorite);
       await _context.SaveChangesAsync();
       return Ok(favorite);
 

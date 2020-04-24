@@ -6,17 +6,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const FavoritesCard = props => {
   const deleteAFavorite = async animal => {
-    const resp = await axios.delete(
-      `/api/profile/favorites/${animal.id}`,
-      {
+    console.log(localStorage.getItem('token'))
+    const resp = await axios({
+      method: 'DELETE',
+      url: `/api/profile/favorites/${animal.id}`,
+      data: {
         animalId: animal.id,
       },
-      {
-        headers: {
-          Authorization: 'Bearer ' + localStorage.getItem('token'),
-        },
-      }
-    )
+      headers: {
+        Authorization: 'Bearer ' + localStorage.getItem('token'),
+      },
+    })
     console.log(resp.data)
   }
 
