@@ -12,9 +12,9 @@ const SignUpPage = () => {
   const [password, setPassword] = useState('')
   const [shouldRedirect, setShouldRedirect] = useState(false)
 
-  // useEffect(() => {
-  //   localStorage.removeItem('token')
-  // })
+  useEffect(() => {
+    localStorage.removeItem('token')
+  }, [])
 
   const sendNewUserToApi = async () => {
     const resp = await axios.post('/auth/signup', {

@@ -12,9 +12,9 @@ const SignInPage = () => {
 
   const { reloadUser } = useUserProfile()
 
-  // useEffect(() => {
-  //   localStorage.removeItem('token')
-  // })
+  useEffect(() => {
+    localStorage.removeItem('token')
+  }, [])
 
   const logUserIntoApi = async () => {
     const resp = await axios.post('/auth/login', {

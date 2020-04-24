@@ -1,16 +1,35 @@
 import React from 'react'
+import axios from 'axios'
 import '../styles/PetCard.scss'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const FavoritesCard = props => {
+  const deleteAFavorite = async animal => {
+    const resp = await axios.delete(
+      `/api/profile/favorites/${animal.id}`,
+      {
+        animalId: animal.id,
+      },
+      {
+        headers: {
+          Authorization: 'Bearer ' + localStorage.getItem('token'),
+        },
+      }
+    )
+    console.log(resp.data)
+  }
+
   return (
     <>
       <section className="card">
         <img className="petImage" src={props.animal.imageUrl} alt="" />
         <section className="animalHeader">
           <p className="animalName">{props.animal.name}</p>
-          <button className="favoriteAnimal">
+          <button
+            className="favoriteAnimal"
+            onClick={() => deleteAFavorite(props.animal)}
+          >
             <FontAwesomeIcon icon={faHeart} />
           </button>
         </section>

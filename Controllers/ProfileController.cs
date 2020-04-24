@@ -65,14 +65,29 @@ namespace CapstoneProject.Controllers
 
     }
 
-    // [HttpGet("favorites")]
-    // public async Task<ActionResult<Favorite>> GetFavoriteAnimals(int id)
-    // {
+    [HttpGet("favorites")]
+    public async Task<ActionResult> GetFavoriteAnimals()
+    {
 
-    //   var results = _context.Favorites.Where(r => r.Id == favoritesId);
-    //   return results;
+      var userId = int.Parse(User.Claims.FirstOrDefault(claim => claim.Type == "id").Value);
+      var results = _context.Favorites.Include(i => i.animal).Where(r => r.UserId == userId).Select(s => s.animal);
+      return Ok(results);
 
-    // }
+    }
+
+    [HttpDelete("favorites/{animalId}")]
+
+    public async Task<ActionResult> DeleteAFavorite(int animalId)
+    {
+
+      var userId = int.Parse(User.Claims.FirstOrDefault(claim => claim.Type == "id").Value);
+      var favorite = _context.Favorites.Where(r => r.UserId == userId && r.AnimalId == animalId);
+
+      _context.Favorites.Remove((Favorite)favorite);
+      await _context.SaveChangesAsync();
+      return Ok(favorite);
+
+    }
 
 
   }
