@@ -10,7 +10,7 @@ namespace CapstoneProject.Models
 
     public DbSet<User> Users { get; set; }
     public DbSet<Animal> Animals { get; set; }
-    public DbSet<Match> Matches { get; set; }
+    public DbSet<Favorite> Favorites { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder builder)

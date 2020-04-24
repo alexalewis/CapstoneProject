@@ -1,6 +1,6 @@
 namespace CapstoneProject.Models
 {
-  public class Match
+  public class Favorite
   {
     public int Id { get; set; }
 

@@ -2,10 +2,66 @@
 
 .card {
   margin: 1rem;
-  border-radius: 15px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  border: 0.1rem solid $purple-color;
 }
 .petImage {
   width: 100%;
   height: auto;
-  border-radius: 15px;
+  border-radius: 10px;
+}
+
+.card p {
+  margin: 1rem;
+}
+
+.animalName {
+  font-size: 2rem;
+  color: $purple-color;
+  font-weight: 800;
+}
+
+.bold {
+  color: $orange-color;
+  font-weight: 900;
+}
+
+.animalHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.favoriteAnimal {
+  margin-right: 2rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1.75rem;
+  color: $purple-color;
+  &:hover {
+    outline-color: white;
+    color: $orange-color;
+  }
+  &:focus {
+    outline-color: white;
+  }
+}
+
+//Media Queries
+
+@media only screen and (min-width: 650px) {
+  .card {
+    flex-wrap: wrap;
+    width: 50%;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .card {
+    flex-wrap: wrap;
+    width: 30%;
+    height: auto;
+  }
 }

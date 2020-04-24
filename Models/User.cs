@@ -22,7 +22,7 @@ namespace CapstoneProject.Models
     [JsonIgnore]
     public string HashedPassword { get; set; }
 
-    public List<Match> Match { get; set; } = new List<Match>();
+    public List<Favorite> Favorites { get; set; } = new List<Favorite>();
 
   }
 }

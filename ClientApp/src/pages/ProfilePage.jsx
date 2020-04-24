@@ -10,9 +10,10 @@ import { faFileAlt } from '@fortawesome/free-solid-svg-icons'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
-const ProfilePage = () => {
+const ProfilePage = props => {
   const { user, reloadUser } = useUserProfile()
   const [shouldRedirect, setShouldRedirect] = useState(false)
+  const [shouldRedirectFavorites, setShouldRedirectFavorites] = useState(false)
 
   useEffect(() => {
     if (!user) {
@@ -26,6 +27,14 @@ const ProfilePage = () => {
 
   if (shouldRedirect) {
     return <Redirect to="/matches" />
+  }
+
+  const getFavorites = async () => {
+    setShouldRedirectFavorites(true)
+  }
+
+  if (shouldRedirectFavorites) {
+    return <Redirect to="/favorites" />
   }
 
   return (
@@ -55,7 +64,7 @@ const ProfilePage = () => {
 
       <section className="icons">
         <section className="iconLayout">
-          <button className="favorites">
+          <button className="favorites" onClick={getFavorites}>
             <FontAwesomeIcon icon={faHeart} />
           </button>
           <p>Favorites</p>
@@ -77,6 +86,7 @@ const ProfilePage = () => {
         <h2>About You</h2>
         <section>
           <ul className="aboutYouThings">
+            <li>Thing</li>
             <li>Thing</li>
             <li>Thing</li>
             <li>Thing</li>

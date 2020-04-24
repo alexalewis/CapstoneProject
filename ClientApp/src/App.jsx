@@ -7,6 +7,7 @@ import ProfilePage from './pages/ProfilePage'
 import SignUpPage from './pages/SignUpPage'
 import QuestionnairePage from './pages/QuestionnairePage'
 import MatchesPage from './pages/MatchesPage'
+import FavoritesPage from './pages/FavoritesPage'
 import NotFound from './pages/NotFound'
 import './custom.scss'
 import axios from 'axios'
@@ -41,6 +42,7 @@ const App = () => {
         <Route exact path="/profile" component={ProfilePage}></Route>
         <Route exact path="/sign-up" component={SignUpPage}></Route>
         <Route exact path="/matches" component={MatchesPage}></Route>
+        <Route exact path="/favorites" component={FavoritesPage}></Route>
         <Route
           exact
           path="/questionnaire"

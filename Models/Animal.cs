@@ -24,7 +24,7 @@ namespace CapstoneProject.Models
     public string ImageUrl { get; set; }
     public DateTime DateAdded { get; set; } = DateTime.Now;
 
-    public List<Match> Match { get; set; } = new List<Match>();
+    public List<Favorite> Favorites { get; set; } = new List<Favorite>();
 
   }
 }

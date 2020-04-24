@@ -46,5 +46,33 @@ namespace CapstoneProject.Controllers
 
       return Ok(matches);
     }
+
+    [HttpPost("favorites/{animalId}")]
+
+    public async Task<ActionResult> SaveFavorites(int animalId)
+    {
+
+      var userId = int.Parse(User.Claims.FirstOrDefault(claim => claim.Type == "id").Value);
+      var favorite = new Favorite
+      {
+        UserId = userId,
+        AnimalId = animalId
+      };
+
+      _context.Favorites.Add(favorite);
+      await _context.SaveChangesAsync();
+      return Ok(favorite);
+
+    }
+
+    // [HttpGet("favorites")]
+    // public async Task<ActionResult> GetFavoriteAnimals()
+    // {
+
+
+    // }
+
+
   }
+
 }
