@@ -66,9 +66,11 @@ namespace CapstoneProject.Controllers
     }
 
     // [HttpGet("favorites")]
-    // public async Task<ActionResult> GetFavoriteAnimals()
+    // public async Task<ActionResult<Favorite>> GetFavoriteAnimals(int id)
     // {
 
+    //   var results = _context.Favorites.Where(r => r.Id == favoritesId);
+    //   return results;
 
     // }
 
