@@ -86,14 +86,22 @@ const ProfilePage = props => {
         <h2>About You</h2>
         <section>
           <ul className="aboutYouThings">
-            <li>Thing</li>
-            <li>Thing</li>
-            <li>Thing</li>
-            <li>Thing</li>
-            <li>Thing</li>
-            <li>Thing</li>
-            <li>Thing</li>
-            <li>Thing</li>
+            <section className="columnOne">
+              <li>You are looking for a : {user.lookingFor}</li>
+              <li>You live in a : {user.housingType}</li>
+              <li>Do you have a yard? : {user.haveYard ? 'Yes' : 'No'}</li>
+              <li>Are you active? : {user.isActive ? 'Yes' : 'No'}</li>
+            </section>
+            <section className="columnTwo">
+              <li>
+                Do you have other animals? : {user.otherAnimals ? 'Yes' : 'No'}
+              </li>
+              <li>Type of other animals : {user.typeOfOtherAnimal}</li>
+              <li>
+                Do you have small children? :{' '}
+                {user.smallChildren ? 'Yes' : 'No'}
+              </li>
+            </section>
           </ul>
         </section>
       </section>

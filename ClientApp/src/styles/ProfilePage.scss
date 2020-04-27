@@ -112,12 +112,14 @@
 
 .aboutYouThings {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
+  font-size: 1rem;
 }
 
 .aboutYouThings li {
-  margin: 2rem;
+  margin: 1rem;
   color: white;
 }
 
@@ -143,5 +145,17 @@
 @media only screen and (min-width: 1024px) {
   .profilePicture {
     padding: 15rem;
+  }
+
+  .aboutYouThings {
+    font-size: 1.25rem;
+  }
+
+  .columnTwo {
+    margin-left: 2rem;
+  }
+
+  .linkToHome {
+    font-size: 1.25rem;
   }
 }
