@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
 import FavoritesCard from '../components/FavoritesCard'
 
-const FavoritesPage = props => {
+const FavoritesPage = () => {
   const [favorites, setFavorites] = useState([])
 
   console.log(favorites)

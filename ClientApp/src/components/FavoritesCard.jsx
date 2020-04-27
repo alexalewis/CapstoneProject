@@ -30,7 +30,9 @@ const FavoritesCard = props => {
             className="favoriteAnimal"
             onClick={() => deleteAFavorite(props.animal)}
           >
-            <FontAwesomeIcon icon={faHeart} />
+            <a className="reload" href="javascript:location.reload(true)">
+              <FontAwesomeIcon icon={faHeart} />
+            </a>
           </button>
         </section>
         <p>{props.animal.description}</p>

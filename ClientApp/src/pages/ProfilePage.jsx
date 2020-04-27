@@ -60,26 +60,28 @@ const ProfilePage = props => {
           </p>
         </section>
       </section>
-      <section className="profilePicture"></section>
+      <section className="layoutLaptop">
+        <section className="profilePicture"></section>
 
-      <section className="icons">
-        <section className="iconLayout">
-          <button className="favorites" onClick={getFavorites}>
-            <FontAwesomeIcon icon={faHeart} />
-          </button>
-          <p>Favorites</p>
-        </section>
-        <section className="iconLayout">
-          <button className="matching" onClick={getMatches}>
-            <FontAwesomeIcon icon={faPaw} />
-          </button>
-          <p>Start Matching</p>
-        </section>
-        <section className="iconLayout">
-          <button className="applications">
-            <FontAwesomeIcon icon={faFileAlt} />
-          </button>
-          <p>Applications</p>
+        <section className="icons">
+          <section className="iconLayout">
+            <button className="favorites" onClick={getFavorites}>
+              <FontAwesomeIcon icon={faHeart} />
+            </button>
+            <p>Favorites</p>
+          </section>
+          <section className="iconLayout">
+            <button className="matching" onClick={getMatches}>
+              <FontAwesomeIcon icon={faPaw} />
+            </button>
+            <p>Start Matching</p>
+          </section>
+          <section className="iconLayout">
+            <button className="applications">
+              <FontAwesomeIcon icon={faFileAlt} />
+            </button>
+            <p>Applications</p>
+          </section>
         </section>
       </section>
       <section className="aboutYou">

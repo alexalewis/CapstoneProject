@@ -22,34 +22,36 @@ const PetCard = props => {
 
   return (
     <>
-      <section className="card">
-        <img className="petImage" src={props.animal.imageUrl} alt="" />
-        <section className="animalHeader">
-          <p className="animalName">{props.animal.name}</p>
-          <button
-            className="favoriteAnimal"
-            onClick={() => saveFavorites(props.animal)}
-          >
-            <FontAwesomeIcon icon={faHeart} />
-          </button>
+      <section className="eachCard">
+        <section className="card">
+          <img className="petImage" src={props.animal.imageUrl} alt="" />
+          <section className="animalHeader">
+            <p className="animalName">{props.animal.name}</p>
+            <button
+              className="favoriteAnimal"
+              onClick={() => saveFavorites(props.animal)}
+            >
+              <FontAwesomeIcon icon={faHeart} />
+            </button>
+          </section>
+          <p>{props.animal.description}</p>
+          <p>{props.animal.age}</p>
+          <p>{props.animal.gender}</p>
+          <p>
+            <a className="bold">Breed</a> : {props.animal.breed}
+          </p>
+          <p>
+            <a className="bold">Rescue Center</a> : {props.animal.rescueCenter}
+          </p>
+          <p>
+            <a className="bold">Up to date on vaccines?</a> :{' '}
+            {props.animal.isVaccinated ? 'Yes' : 'No'}
+          </p>
+          <p>
+            <a className="bold">Are they neutered?</a> :{' '}
+            {props.animal.isNeutered ? 'Yes' : 'No'}
+          </p>
         </section>
-        <p>{props.animal.description}</p>
-        <p>{props.animal.age}</p>
-        <p>{props.animal.gender}</p>
-        <p>
-          <a className="bold">Breed</a> : {props.animal.breed}
-        </p>
-        <p>
-          <a className="bold">Rescue Center</a> : {props.animal.rescueCenter}
-        </p>
-        <p>
-          <a className="bold">Up to date on vaccines?</a> :{' '}
-          {props.animal.isVaccinated ? 'Yes' : 'No'}
-        </p>
-        <p>
-          <a className="bold">Are they neutered?</a> :{' '}
-          {props.animal.isNeutered ? 'Yes' : 'No'}
-        </p>
       </section>
     </>
   )

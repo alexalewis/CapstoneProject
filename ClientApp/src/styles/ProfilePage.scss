@@ -144,7 +144,14 @@
 
 @media only screen and (min-width: 1024px) {
   .profilePicture {
-    padding: 15rem;
+    padding: 13rem;
+    margin-left: 4rem;
+    margin-bottom: 1rem;
+    margin-top: -1rem;
+  }
+
+  .profileHeader {
+    margin-right: 5rem;
   }
 
   .aboutYouThings {
@@ -157,5 +164,25 @@
 
   .linkToHome {
     font-size: 1.25rem;
+  }
+
+  .layoutLaptop {
+    display: flex;
+  }
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    margin-right: 5rem;
+    justify-content: space-evenly;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+  .city {
+    font-size: 1.5rem;
   }
 }

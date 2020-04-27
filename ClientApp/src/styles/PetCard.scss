@@ -48,10 +48,26 @@
   }
 }
 
+.reload {
+  background-color: transparent;
+  border: none;
+  font-size: 1.75rem;
+  color: $purple-color;
+  &:hover {
+    outline-color: white;
+    color: $orange-color;
+  }
+  &:focus {
+    outline-color: white;
+  }
+}
+
 //Media Queries
 
 @media only screen and (min-width: 650px) {
-  .card {
+  .eachCard {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     width: 50%;
     height: auto;
@@ -59,9 +75,11 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .card {
+  .eachCard {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    width: 30%;
+    width: 40%;
     height: auto;
   }
 }
