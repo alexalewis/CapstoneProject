@@ -14,7 +14,7 @@ import axios from 'axios'
 import { UserProfileContext } from './components/UserProfileContext'
 
 const App = () => {
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState()
   const token = localStorage.getItem('token')
 
   const reloadUser = useCallback(() => {
@@ -25,6 +25,7 @@ const App = () => {
         },
       })
       .then(response => {
+        //       localStorage.setItem('token', response.data.token)
         console.log('loaded the user', response.data)
         setUser(response.data)
       })

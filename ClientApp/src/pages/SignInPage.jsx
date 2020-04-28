@@ -1,6 +1,6 @@
 import '../styles/SignInPage.scss'
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer.jsx'
 import axios from 'axios'
@@ -9,6 +9,7 @@ import { useUserProfile } from '../components/UserProfileContext'
 const SignInPage = () => {
   const [logInEmail, setLogInEmail] = useState('')
   const [logInPassword, setLogInPassword] = useState('')
+  const [loginSuccessful, setLoginSuccessful] = useState(false)
 
   const { reloadUser } = useUserProfile()
 
@@ -24,8 +25,13 @@ const SignInPage = () => {
     if (resp.status === 200) {
       console.log(resp.data)
       localStorage.setItem('token', resp.data.token)
-      reloadUser()
+      //reloadUser()
+      setLoginSuccessful(true)
     }
+  }
+
+  if (loginSuccessful) {
+    return <Redirect to="/profile" />
   }
 
   return (
@@ -49,9 +55,7 @@ const SignInPage = () => {
         ></input>
       </section>
       <section className="enterButton">
-        <Link className="signInButton" to="/profile">
-          <button onClick={logUserIntoApi}>Sign In</button>
-        </Link>
+        <button onClick={logUserIntoApi}>Sign In</button>
       </section>
       <section className="account">
         <p>

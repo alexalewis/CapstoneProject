@@ -16,13 +16,7 @@ const ProfilePage = props => {
   const [shouldRedirectFavorites, setShouldRedirectFavorites] = useState(false)
 
   useEffect(() => {
-    localStorage.removeItem('token')
-  }, [])
-
-  useEffect(() => {
-    if (!user) {
-      reloadUser()
-    }
+    reloadUser()
   }, [])
 
   const getMatches = async () => {
@@ -39,6 +33,10 @@ const ProfilePage = props => {
 
   if (shouldRedirectFavorites) {
     return <Redirect to="/favorites" />
+  }
+
+  if (!user) {
+    return <>loading...</>
   }
 
   return (
