@@ -1,8 +1,8 @@
-docker build -t CapstoneProject-image .
+docker build -t endlesspawsibilities-image .
 
-docker tag CapstoneProject-image registry.heroku.com/CapstoneProject/web
+docker tag endlesspawsibilities-image registry.heroku.com/endlesspawsibilities/web
 
 
-docker push registry.heroku.com/CapstoneProject/web
+docker push registry.heroku.com/endlesspawsibilities/web
 
-heroku container:release web -a CapstoneProject
+heroku container:release web -a endlesspawsibilities

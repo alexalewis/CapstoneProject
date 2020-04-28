@@ -53,6 +53,10 @@
   &:focus {
     outline-color: $purple-color;
   }
+
+  .inputText {
+    padding: 1rem 6rem;
+  }
 }
 
 //Media Queries
