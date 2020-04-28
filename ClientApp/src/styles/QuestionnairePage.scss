@@ -39,7 +39,7 @@
 }
 
 .submitQuestionButton button {
-  padding: 1rem 5rem;
+  padding: 1rem 8rem;
   font-size: 1rem;
   font-family: 'Quicksand';
   background-color: $orange-color;
@@ -52,10 +52,6 @@
   }
   &:focus {
     outline-color: $purple-color;
-  }
-
-  .inputText {
-    padding: 1rem 6rem;
   }
 }
 
