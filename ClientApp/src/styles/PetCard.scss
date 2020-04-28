@@ -65,21 +65,28 @@
 //Media Queries
 
 @media only screen and (min-width: 650px) {
-  .eachCard {
+  .petCard {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .eachCard {
     width: 50%;
     height: auto;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .eachCard {
+  .petCard {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 40%;
+    margin-left: 3rem;
+  }
+
+  .eachCard {
+    width: 30%;
     height: auto;
   }
 }

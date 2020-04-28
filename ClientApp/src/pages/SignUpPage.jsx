@@ -73,6 +73,9 @@ const SignUpPage = () => {
           value={password}
           onChange={e => setPassword(e.target.value)}
         ></input>
+        <p className="lengthOfPassword">
+          Password must be at least 7 characters long
+        </p>
       </section>
       <section className="submitButton">
         <button onClick={sendNewUserToApi}>Sign Up</button>

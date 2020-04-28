@@ -10,7 +10,7 @@ import { faFileAlt } from '@fortawesome/free-solid-svg-icons'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
-const ProfilePage = props => {
+const ProfilePage = () => {
   const { user, reloadUser } = useUserProfile()
   const [shouldRedirect, setShouldRedirect] = useState(false)
   const [shouldRedirectFavorites, setShouldRedirectFavorites] = useState(false)

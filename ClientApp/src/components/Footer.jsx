@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <section className="footerName">Name</section>
+        <section className="footerName">Endless Pawsibilities</section>
         <section className="socialMedia">
           <button className="twitter">
             <FontAwesomeIcon icon={faTwitterSquare} />

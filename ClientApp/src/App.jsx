@@ -25,7 +25,6 @@ const App = () => {
         },
       })
       .then(response => {
-        //       localStorage.setItem('token', response.data.token)
         console.log('loaded the user', response.data)
         setUser(response.data)
       })

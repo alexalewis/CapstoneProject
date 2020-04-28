@@ -8,7 +8,7 @@ const HomePage = () => {
     <>
       <header className="homePageHeader">
         <NavBar />
-        <h1 className="appHeading">Name of the App</h1>
+        <h1 className="appHeading">Endless Pawsibilities</h1>
         <h2 className="tagline">Your furry friend is waiting</h2>
       </header>
       <section className="aboutUs">
@@ -34,7 +34,7 @@ const HomePage = () => {
           <h4>Match</h4>
           <p>
             Match with rescue animals, read their descriptions, and favorite if
-            it's a good fit or "x" if not
+            it's a good fit
           </p>
         </section>
         <section className="list">

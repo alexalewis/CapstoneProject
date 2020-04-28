@@ -57,6 +57,12 @@ label {
   }
 }
 
+.lengthOfPassword {
+  text-align: center;
+  color: $grey-color;
+  font-size: 0.75rem;
+}
+
 //Media Queries
 
 @media only screen and (min-width: 650px) {
