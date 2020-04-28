@@ -16,6 +16,10 @@ const ProfilePage = props => {
   const [shouldRedirectFavorites, setShouldRedirectFavorites] = useState(false)
 
   useEffect(() => {
+    localStorage.removeItem('token')
+  }, [])
+
+  useEffect(() => {
     if (!user) {
       reloadUser()
     }
