@@ -9,7 +9,6 @@ const Questions = () => {
   const [haveYard, setHaveYard] = useState(false)
   const [lookingFor, setLookingFor] = useState('')
   const [isActive, setIsActive] = useState(false)
-  const [otherAnimals, setOtherAnimals] = useState(false)
   const [typeOfOtherAnimal, setTypeOfOtherAnimal] = useState('')
   const [smallChildren, setSmallChildren] = useState(false)
 
@@ -45,14 +44,6 @@ const Questions = () => {
     }
   }
 
-  const changeOtherAnimals = value => {
-    if (value === 'yes') {
-      setOtherAnimals(true)
-    } else {
-      setOtherAnimals(false)
-    }
-  }
-
   const changeTypeOfOtherAnimal = value => {
     if (value === 'cat') {
       setTypeOfOtherAnimal(value)
@@ -81,7 +72,6 @@ const Questions = () => {
         HaveYard: haveYard,
         LookingFor: lookingFor,
         IsActive: isActive,
-        OtherAnimals: otherAnimals,
         TypeOfOtherAnimal: typeOfOtherAnimal,
         SmallChildren: smallChildren,
       },
@@ -97,8 +87,7 @@ const Questions = () => {
   return (
     <>
       <p className="directions">
-        Just fill out these questions and then sign in to get started finding a
-        match!
+        Just fill out these questions to get started finding a match!
       </p>
       <form className="questionForm">
         <p className="question" id="topOfPage">
@@ -209,27 +198,6 @@ const Questions = () => {
             onChange={e => changeToIsActive(e.target.value)}
           ></input>
           <label htmlFor="noActive">No</label>
-        </section>
-        <p className="question">Do you have other animals?</p>
-        <section className="inputRadio">
-          <input
-            type="radio"
-            id="yesAnimals"
-            name="OtherAnimals"
-            value="yes"
-            onChange={e => changeOtherAnimals(e.target.value)}
-          ></input>
-          <label htmlFor="yesAnimals">Yes</label>
-        </section>
-        <section className="inputRadio">
-          <input
-            type="radio"
-            id="noAnimals"
-            name="OtherAnimals"
-            value="no"
-            onChange={e => changeOtherAnimals(e.target.value)}
-          ></input>
-          <label htmlFor="noAnimals">No</label>
         </section>
         <p className="question">What type of other animal do you have?</p>
         <section className="inputRadio">

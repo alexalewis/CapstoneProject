@@ -91,12 +91,13 @@ const ProfilePage = () => {
         <section>
           <ul className="aboutYouThings">
             <section className="columnOne">
+              <li>You are {user.age} years old</li>
               <li>You are looking for a : {user.lookingFor}</li>
               <li>You live in a : {user.housingType}</li>
               <li>Do you have a yard? : {user.haveYard ? 'Yes' : 'No'}</li>
-              <li>Are you active? : {user.isActive ? 'Yes' : 'No'}</li>
             </section>
             <section className="columnTwo">
+              <li>Are you active? : {user.isActive ? 'Yes' : 'No'}</li>
               <li>
                 Do you have other animals? : {user.otherAnimals ? 'Yes' : 'No'}
               </li>

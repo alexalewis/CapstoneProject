@@ -52,11 +52,11 @@ namespace CapstoneProject.Models
             Breed = "Tabby",
             RescueCenter = "PetPal Animal Shelter",
             Zipcode = "33713",
-            HousingType = "apartment",
-            NeedYard = false,
+            HousingType = "house",
+            NeedYard = true,
             GoodWith = "cat",
-            GoodWithSmallChildren = false,
-            IsActive = false,
+            GoodWithSmallChildren = true,
+            IsActive = true,
             IsNeutered = true,
             IsVaccinated = true,
             Description = "Honey is a sweet girl who is looking for someone with a comfy lap and has time to pet her for days.",
@@ -79,7 +79,7 @@ namespace CapstoneProject.Models
             Zipcode = "33713",
             HousingType = "house",
             NeedYard = true,
-            GoodWith = "cat and dog",
+            GoodWith = "dog",
             GoodWithSmallChildren = true,
             IsActive = true,
             IsNeutered = false,
@@ -102,11 +102,11 @@ namespace CapstoneProject.Models
             Breed = "Terrier",
             RescueCenter = "ASPCA",
             Zipcode = "33713",
-            HousingType = "apartment",
-            NeedYard = false,
-            GoodWith = "cat",
-            GoodWithSmallChildren = false,
-            IsActive = false,
+            HousingType = "house",
+            NeedYard = true,
+            GoodWith = "none ",
+            GoodWithSmallChildren = true,
+            IsActive = true,
             IsNeutered = true,
             IsVaccinated = true,
             Description = "Sweetie justs wants to curl up on the couch next to you and watch movies all day. She will make the perfect snuggle baby for someone!",
@@ -129,7 +129,7 @@ namespace CapstoneProject.Models
             Zipcode = "33713",
             HousingType = "house",
             NeedYard = true,
-            GoodWith = "none",
+            GoodWith = "cat",
             GoodWithSmallChildren = true,
             IsActive = true,
             IsNeutered = true,
@@ -153,8 +153,8 @@ namespace CapstoneProject.Models
             RescueCenter = "ASPCA",
             Zipcode = "33713",
             HousingType = "house",
-            NeedYard = true,
-            GoodWith = "none",
+            NeedYard = false,
+            GoodWith = "cat and dog",
             GoodWithSmallChildren = true,
             IsActive = true,
             IsNeutered = true,
@@ -178,7 +178,7 @@ namespace CapstoneProject.Models
             RescueCenter = "ASPCA",
             Zipcode = "33713",
             HousingType = "house",
-            NeedYard = true,
+            NeedYard = false,
             GoodWith = "none",
             GoodWithSmallChildren = true,
             IsActive = true,
@@ -189,6 +189,7 @@ namespace CapstoneProject.Models
             DateAdded = DateTime.Now,
           }
       );
+
 
       base.OnModelCreating(builder);
       builder.Entity<Animal>().HasData(
@@ -411,6 +412,431 @@ namespace CapstoneProject.Models
             IsVaccinated = true,
             Description = "Dunkin is a very athletic dog that loves to play firsbee or pull you on your skateboard!",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588009236/dunkin_glzbgz.jpg",
+            DateAdded = DateTime.Now,
+          }
+      );
+
+      base.OnModelCreating(builder);
+      builder.Entity<Animal>().HasData(
+          new Animal
+          {
+            Id = 17,
+            Name = "Blake",
+            Age = "3 years old",
+            Gender = "Male",
+            CatOrDog = "dog",
+            Breed = "Pitbull",
+            RescueCenter = "ASPCA",
+            Zipcode = "33713",
+            HousingType = "house",
+            NeedYard = false,
+            GoodWith = "cat",
+            GoodWithSmallChildren = true,
+            IsActive = true,
+            IsNeutered = true,
+            IsVaccinated = true,
+            Description = "",
+            ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588088810/blake_wz3o4g.jpg",
+            DateAdded = DateTime.Now,
+          }
+      );
+
+      base.OnModelCreating(builder);
+      builder.Entity<Animal>().HasData(
+          new Animal
+          {
+            Id = 18,
+            Name = "Stella",
+            Age = "5 years old",
+            Gender = "Female",
+            CatOrDog = "dog",
+            Breed = "Pitbull",
+            RescueCenter = "PetPal Animal Shelter",
+            Zipcode = "33713",
+            HousingType = "house",
+            NeedYard = false,
+            GoodWith = "dog",
+            GoodWithSmallChildren = true,
+            IsActive = true,
+            IsNeutered = true,
+            IsVaccinated = true,
+            Description = "",
+            ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588088810/stella_hsa5km.jpg",
+            DateAdded = DateTime.Now,
+          }
+      );
+
+      base.OnModelCreating(builder);
+      builder.Entity<Animal>().HasData(
+          new Animal
+          {
+            Id = 19,
+            Name = "Maverick",
+            Age = "2 years old",
+            Gender = "Male",
+            CatOrDog = "dog",
+            Breed = "Dalmatian",
+            RescueCenter = "PetPal Animal Shelter",
+            Zipcode = "33713",
+            HousingType = "house",
+            NeedYard = true,
+            GoodWith = "dog",
+            GoodWithSmallChildren = false,
+            IsActive = true,
+            IsNeutered = true,
+            IsVaccinated = true,
+            Description = "",
+            ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588088816/maverick_sxaj1x.jpg",
+            DateAdded = DateTime.Now,
+          }
+      );
+
+      base.OnModelCreating(builder);
+      builder.Entity<Animal>().HasData(
+          new Animal
+          {
+            Id = 20,
+            Name = "Oliver",
+            Age = "6 months old",
+            Gender = "Male",
+            CatOrDog = "dog",
+            Breed = "Yorkie",
+            RescueCenter = "PetPal Animal Shelter",
+            Zipcode = "33713",
+            HousingType = "apartment",
+            NeedYard = true,
+            GoodWith = "cat",
+            GoodWithSmallChildren = false,
+            IsActive = true,
+            IsNeutered = true,
+            IsVaccinated = true,
+            Description = "",
+            ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588088814/oliver_o4ep1l.jpg",
+            DateAdded = DateTime.Now,
+          }
+      );
+
+      base.OnModelCreating(builder);
+      builder.Entity<Animal>().HasData(
+          new Animal
+          {
+            Id = 21,
+            Name = "Zack",
+            Age = "6 months old",
+            Gender = "Male",
+            CatOrDog = "dog",
+            Breed = "Labordor Retriever",
+            RescueCenter = "PetPal Animal Shelter",
+            Zipcode = "33713",
+            HousingType = "house",
+            NeedYard = true,
+            GoodWith = "cat and dog",
+            GoodWithSmallChildren = false,
+            IsActive = true,
+            IsNeutered = true,
+            IsVaccinated = true,
+            Description = "",
+            ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588088814/zack_d8t07o.jpg",
+            DateAdded = DateTime.Now,
+          }
+      );
+
+      base.OnModelCreating(builder);
+      builder.Entity<Animal>().HasData(
+          new Animal
+          {
+            Id = 22,
+            Name = "Tesla",
+            Age = "1 years old",
+            Gender = "Female",
+            CatOrDog = "dog",
+            Breed = "Corgi",
+            RescueCenter = "Humane Society of Pinellas",
+            Zipcode = "33713",
+            HousingType = "apartment",
+            NeedYard = false,
+            GoodWith = "none",
+            GoodWithSmallChildren = false,
+            IsActive = true,
+            IsNeutered = true,
+            IsVaccinated = true,
+            Description = "",
+            ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588088812/tesla_hb1hsb.jpg",
+            DateAdded = DateTime.Now,
+          }
+      );
+
+      base.OnModelCreating(builder);
+      builder.Entity<Animal>().HasData(
+          new Animal
+          {
+            Id = 23,
+            Name = "Macy",
+            Age = "4 years old",
+            Gender = "Female",
+            CatOrDog = "dog",
+            Breed = "Australian Shepard",
+            RescueCenter = "Humane Society of Pinellas",
+            Zipcode = "33713",
+            HousingType = "apartment",
+            NeedYard = false,
+            GoodWith = "dog",
+            GoodWithSmallChildren = false,
+            IsActive = false,
+            IsNeutered = true,
+            IsVaccinated = true,
+            Description = "",
+            ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588088809/macy_csaskg.jpg",
+            DateAdded = DateTime.Now,
+          }
+      );
+
+      base.OnModelCreating(builder);
+      builder.Entity<Animal>().HasData(
+          new Animal
+          {
+            Id = 24,
+            Name = "Ginger",
+            Age = "6 years old",
+            Gender = "Female",
+            CatOrDog = "dog",
+            Breed = "Mixed Breed",
+            RescueCenter = "Humane Society of Pinellas",
+            Zipcode = "33713",
+            HousingType = "apartment",
+            NeedYard = false,
+            GoodWith = "cat",
+            GoodWithSmallChildren = false,
+            IsActive = false,
+            IsNeutered = true,
+            IsVaccinated = true,
+            Description = "",
+            ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588088809/ginger_r2yi1s.jpg",
+            DateAdded = DateTime.Now,
+          }
+      );
+
+      base.OnModelCreating(builder);
+      builder.Entity<Animal>().HasData(
+          new Animal
+          {
+            Id = 25,
+            Name = "Wilson",
+            Age = "8 months old",
+            Gender = "Male",
+            CatOrDog = "dog",
+            Breed = "Labardor Retriever",
+            RescueCenter = "Humane Society of Pinellas",
+            Zipcode = "33713",
+            HousingType = "house",
+            NeedYard = true,
+            GoodWith = "cat and dog",
+            GoodWithSmallChildren = false,
+            IsActive = false,
+            IsNeutered = true,
+            IsVaccinated = true,
+            Description = "",
+            ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090091/wilson_nukavk.jpg",
+            DateAdded = DateTime.Now,
+          }
+      );
+
+      base.OnModelCreating(builder);
+      builder.Entity<Animal>().HasData(
+          new Animal
+          {
+            Id = 26,
+            Name = "Penny",
+            Age = "9 years old",
+            Gender = "Female",
+            CatOrDog = "dog",
+            Breed = "Pomeranian",
+            RescueCenter = "PetPal Animal Shelter",
+            Zipcode = "33713",
+            HousingType = "house",
+            NeedYard = true,
+            GoodWith = "none",
+            GoodWithSmallChildren = false,
+            IsActive = false,
+            IsNeutered = true,
+            IsVaccinated = true,
+            Description = "",
+            ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090092/penny_bzlvft.jpg",
+            DateAdded = DateTime.Now,
+          }
+      );
+
+      base.OnModelCreating(builder);
+      builder.Entity<Animal>().HasData(
+          new Animal
+          {
+            Id = 27,
+            Name = "Marley",
+            Age = "6 months old",
+            Gender = "Female",
+            CatOrDog = "cat",
+            Breed = "Domestic Long Hair",
+            RescueCenter = "PetPal Animal Shelter",
+            Zipcode = "33713",
+            HousingType = "house",
+            NeedYard = true,
+            GoodWith = "dog",
+            GoodWithSmallChildren = true,
+            IsActive = false,
+            IsNeutered = true,
+            IsVaccinated = true,
+            Description = "",
+            ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090490/marley_vlsojk.jpg",
+            DateAdded = DateTime.Now,
+          }
+      );
+
+      base.OnModelCreating(builder);
+      builder.Entity<Animal>().HasData(
+          new Animal
+          {
+            Id = 28,
+            Name = "Amber",
+            Age = "2 years old",
+            Gender = "Female",
+            CatOrDog = "cat",
+            Breed = "Tabby",
+            RescueCenter = "PetPal Animal Shelter",
+            Zipcode = "33713",
+            HousingType = "house",
+            NeedYard = true,
+            GoodWith = "cat",
+            GoodWithSmallChildren = true,
+            IsActive = false,
+            IsNeutered = true,
+            IsVaccinated = true,
+            Description = "",
+            ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090489/amber_j0odow.jpg",
+            DateAdded = DateTime.Now,
+          }
+      );
+
+      base.OnModelCreating(builder);
+      builder.Entity<Animal>().HasData(
+          new Animal
+          {
+            Id = 29,
+            Name = "Oswald",
+            Age = "4 years old",
+            Gender = "Male",
+            CatOrDog = "cat",
+            Breed = "Domestic Medium hair",
+            RescueCenter = "Humane Society of Pinellas",
+            Zipcode = "33713",
+            HousingType = "house",
+            NeedYard = true,
+            GoodWith = "cat and dog",
+            GoodWithSmallChildren = true,
+            IsActive = false,
+            IsNeutered = true,
+            IsVaccinated = true,
+            Description = "",
+            ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090489/oswald_j074v2.jpg",
+            DateAdded = DateTime.Now,
+          }
+      );
+
+      base.OnModelCreating(builder);
+      builder.Entity<Animal>().HasData(
+          new Animal
+          {
+            Id = 30,
+            Name = "Whitney",
+            Age = "1 years old",
+            Gender = "Female",
+            CatOrDog = "cat",
+            Breed = "Domestic Long Hair",
+            RescueCenter = "Humane Society of Pinellas",
+            Zipcode = "33713",
+            HousingType = "house",
+            NeedYard = true,
+            GoodWith = "none",
+            GoodWithSmallChildren = true,
+            IsActive = false,
+            IsNeutered = true,
+            IsVaccinated = true,
+            Description = "",
+            ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090488/whitney_fzymak.jpg",
+            DateAdded = DateTime.Now,
+          }
+      );
+
+      base.OnModelCreating(builder);
+      builder.Entity<Animal>().HasData(
+          new Animal
+          {
+            Id = 31,
+            Name = "Ricky",
+            Age = "1 years old",
+            Gender = "Male",
+            CatOrDog = "cat",
+            Breed = "Grey Tabby",
+            RescueCenter = "Humane Society of Pinellas",
+            Zipcode = "33713",
+            HousingType = "apartment",
+            NeedYard = false,
+            GoodWith = "cat and dog",
+            GoodWithSmallChildren = true,
+            IsActive = true,
+            IsNeutered = true,
+            IsVaccinated = true,
+            Description = "",
+            ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090486/ricky_skjqft.jpg",
+            DateAdded = DateTime.Now,
+          }
+      );
+
+      base.OnModelCreating(builder);
+      builder.Entity<Animal>().HasData(
+          new Animal
+          {
+            Id = 32,
+            Name = "Sasha",
+            Age = "2 years old",
+            Gender = "Female",
+            CatOrDog = "cat",
+            Breed = "Sphinx",
+            RescueCenter = "PetPal Animal Shelter",
+            Zipcode = "33713",
+            HousingType = "apartment",
+            NeedYard = false,
+            GoodWith = "none",
+            GoodWithSmallChildren = true,
+            IsActive = true,
+            IsNeutered = true,
+            IsVaccinated = true,
+            Description = "",
+            ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090485/sasha_zsz48a.jpg",
+            DateAdded = DateTime.Now,
+          }
+      );
+
+      base.OnModelCreating(builder);
+      builder.Entity<Animal>().HasData(
+          new Animal
+          {
+            Id = 33,
+            Name = "Jenkins",
+            Age = "1 years old",
+            Gender = "Male",
+            CatOrDog = "cat",
+            Breed = "Domestic Short Hair",
+            RescueCenter = "PetPal Animal Shelter",
+            Zipcode = "33713",
+            HousingType = "apartment",
+            NeedYard = false,
+            GoodWith = "cat",
+            GoodWithSmallChildren = false,
+            IsActive = false,
+            IsNeutered = true,
+            IsVaccinated = true,
+            Description = "",
+            ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090482/jenkins_eviv7m.jpg",
             DateAdded = DateTime.Now,
           }
       );

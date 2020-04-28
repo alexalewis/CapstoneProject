@@ -35,7 +35,6 @@ namespace CapstoneProject.Controllers
       currentUser.HaveYard = user.HaveYard;
       currentUser.LookingFor = user.LookingFor;
       currentUser.IsActive = user.IsActive;
-      currentUser.OtherAnimals = user.OtherAnimals;
       currentUser.TypeOfOtherAnimal = user.TypeOfOtherAnimal;
       currentUser.SmallChildren = user.SmallChildren;
 
