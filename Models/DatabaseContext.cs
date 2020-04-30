@@ -435,7 +435,7 @@ namespace CapstoneProject.Models
             IsActive = true,
             IsNeutered = true,
             IsVaccinated = true,
-            Description = "",
+            Description = "Blake is looking for his best pal. Someone that lets him join in on all of their adventures!",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588088810/blake_wz3o4g.jpg",
             DateAdded = DateTime.Now,
           }
@@ -460,7 +460,7 @@ namespace CapstoneProject.Models
             IsActive = true,
             IsNeutered = true,
             IsVaccinated = true,
-            Description = "",
+            Description = "Stella is a very sweet girl but can be skittish. She just needs a little time to warm up!",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588088810/stella_hsa5km.jpg",
             DateAdded = DateTime.Now,
           }
@@ -485,7 +485,7 @@ namespace CapstoneProject.Models
             IsActive = true,
             IsNeutered = true,
             IsVaccinated = true,
-            Description = "",
+            Description = "Maverick is an amazing dog that will wake you up every morning to remind you its time for his walk!",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588088816/maverick_sxaj1x.jpg",
             DateAdded = DateTime.Now,
           }
@@ -504,13 +504,13 @@ namespace CapstoneProject.Models
             RescueCenter = "PetPal Animal Shelter",
             Zipcode = "33713",
             HousingType = "apartment",
-            NeedYard = true,
-            GoodWith = "cat",
+            NeedYard = false,
+            GoodWith = "dog",
             GoodWithSmallChildren = false,
             IsActive = true,
             IsNeutered = true,
             IsVaccinated = true,
-            Description = "",
+            Description = "Just a little puppy, Oliver needs someone who ready take him on!",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588088814/oliver_o4ep1l.jpg",
             DateAdded = DateTime.Now,
           }
@@ -535,7 +535,7 @@ namespace CapstoneProject.Models
             IsActive = true,
             IsNeutered = true,
             IsVaccinated = true,
-            Description = "",
+            Description = "Zack needs all the training a puppy can get!",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588088814/zack_d8t07o.jpg",
             DateAdded = DateTime.Now,
           }
@@ -560,7 +560,7 @@ namespace CapstoneProject.Models
             IsActive = true,
             IsNeutered = true,
             IsVaccinated = true,
-            Description = "",
+            Description = "Tesla is a very energetic girl that loves to for rides in the car!",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588088812/tesla_hb1hsb.jpg",
             DateAdded = DateTime.Now,
           }
@@ -578,14 +578,14 @@ namespace CapstoneProject.Models
             Breed = "Australian Shepard",
             RescueCenter = "Humane Society of Pinellas",
             Zipcode = "33713",
-            HousingType = "apartment",
-            NeedYard = false,
+            HousingType = "house",
+            NeedYard = true,
             GoodWith = "dog",
             GoodWithSmallChildren = false,
             IsActive = false,
             IsNeutered = true,
             IsVaccinated = true,
-            Description = "",
+            Description = "Macy needs a job being that she is an Australian Shepard. Take her running or on a boat ride, either way she will be happy to be out and about with you! ",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588088809/macy_csaskg.jpg",
             DateAdded = DateTime.Now,
           }
@@ -610,7 +610,7 @@ namespace CapstoneProject.Models
             IsActive = false,
             IsNeutered = true,
             IsVaccinated = true,
-            Description = "",
+            Description = "Ginger would be happy with someone who spends a lot of time at home so she can get her daily dose of snuggles!",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588088809/ginger_r2yi1s.jpg",
             DateAdded = DateTime.Now,
           }
@@ -635,7 +635,7 @@ namespace CapstoneProject.Models
             IsActive = false,
             IsNeutered = true,
             IsVaccinated = true,
-            Description = "",
+            Description = "Wilson is a lab like any other. He loves to play firsbee and give licks to total strangers!",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090091/wilson_nukavk.jpg",
             DateAdded = DateTime.Now,
           }
@@ -660,7 +660,7 @@ namespace CapstoneProject.Models
             IsActive = false,
             IsNeutered = true,
             IsVaccinated = true,
-            Description = "",
+            Description = "Penny is a senior Pomeranian who will follow you around everywhere until she gets little scraps of food for being so cute!",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090092/penny_bzlvft.jpg",
             DateAdded = DateTime.Now,
           }
@@ -685,7 +685,7 @@ namespace CapstoneProject.Models
             IsActive = false,
             IsNeutered = true,
             IsVaccinated = true,
-            Description = "",
+            Description = "Marley would be just fine in a house with dogs as long as she still gets some attention now and then!",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090490/marley_vlsojk.jpg",
             DateAdded = DateTime.Now,
           }
@@ -710,7 +710,7 @@ namespace CapstoneProject.Models
             IsActive = false,
             IsNeutered = true,
             IsVaccinated = true,
-            Description = "",
+            Description = "Amber loves to hang out on high surfaces so that she can see the whole family!",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090489/amber_j0odow.jpg",
             DateAdded = DateTime.Now,
           }
@@ -735,7 +735,7 @@ namespace CapstoneProject.Models
             IsActive = false,
             IsNeutered = true,
             IsVaccinated = true,
-            Description = "",
+            Description = "Oswald has a very spunky personality and would love to have some other animals in the family!",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090489/oswald_j074v2.jpg",
             DateAdded = DateTime.Now,
           }
@@ -760,7 +760,7 @@ namespace CapstoneProject.Models
             IsActive = false,
             IsNeutered = true,
             IsVaccinated = true,
-            Description = "",
+            Description = "Whitney would be best in a home where she is the only cat that way she doesn't have to share the snuggles!",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090488/whitney_fzymak.jpg",
             DateAdded = DateTime.Now,
           }
@@ -785,7 +785,7 @@ namespace CapstoneProject.Models
             IsActive = true,
             IsNeutered = true,
             IsVaccinated = true,
-            Description = "",
+            Description = "Ricky is a very sweet cat who just wants to curl up on the end of the couch while you read your favorite book!",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090486/ricky_skjqft.jpg",
             DateAdded = DateTime.Now,
           }
@@ -810,7 +810,7 @@ namespace CapstoneProject.Models
             IsActive = true,
             IsNeutered = true,
             IsVaccinated = true,
-            Description = "",
+            Description = "Sasha is a very special Sphinx cat that needs special attention because of her lack of hair.",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090485/sasha_zsz48a.jpg",
             DateAdded = DateTime.Now,
           }
@@ -835,7 +835,7 @@ namespace CapstoneProject.Models
             IsActive = false,
             IsNeutered = true,
             IsVaccinated = true,
-            Description = "",
+            Description = "Jenkins is ready for his forever family!",
             ImageUrl = "https://res.cloudinary.com/do8vvvqfj/image/upload/v1588090482/jenkins_eviv7m.jpg",
             DateAdded = DateTime.Now,
           }

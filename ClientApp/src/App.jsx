@@ -15,9 +15,10 @@ import { UserProfileContext } from './components/UserProfileContext'
 
 const App = () => {
   const [user, setUser] = useState()
-  const token = localStorage.getItem('token')
+  let token = localStorage.getItem('token')
 
   const reloadUser = useCallback(() => {
+    token = localStorage.getItem('token')
     axios
       .get('/api/profile', {
         headers: {
